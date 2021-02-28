@@ -1,0 +1,32 @@
+<!-- Nav bar -->
+<div class="mains">
+<mat-toolbar class="navbar">
+  <div class="ham">
+    <button [matMenuTriggerFor]="menu"  mat-icon-button class="example-icon"
+      aria-label="Example icon-button with menu icon">
+      <mat-icon>menu</mat-icon>
+    </button>
+  </div>
+
+  <div>
+    <span class="auth">KanishkAuth</span>
+  </div>
+  <div class="home-div">
+    <span  class="span"><a    routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="/">Home</a></span>
+
+    <span class="span"><a  routerLinkActive="active" routerLink="/view-all-product">Products</a></span>
+    <span class="span"><a routerLinkActive="active" routerLink="/add-product">Add Product</a></span>
+    <span class="span"><a routerLinkActive="active" routerLink="/sign-in">Sign in</a></span>
+  </div>
+
+</mat-toolbar>
+
+<!-- Menu -->
+
+<mat-menu style="background: black;" #menu="matMenu" class="menu">
+  <button mat-menu-item><a class="kkk" routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Home</a></button>
+  <button mat-menu-item><a class="kkk" routerLinkActive="active" routerLink="/view-all-product">Products</a></button>
+  <button mat-menu-item><a class="kkk" routerLinkActive="active" routerLink="/add-product">Add Product</a></button>
+  <button mat-menu-item><a class="kkk" routerLinkActive="active" routerLink="/sign-in">Sign in</a></button>
+</mat-menu>
+</div>

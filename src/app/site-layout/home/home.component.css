@@ -1,0 +1,95 @@
+.mains{
+    background: url("/../assets/bg.jpg");
+    background-size: 100% 100%;
+    height: 100vh;
+    
+}
+.kk span{
+    font-size: 40px;
+    color: #fff;
+}
+.kk{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: end;
+    height: 30rem;
+    width: 100%;
+    margin-left: 42px;
+}
+p{
+    color: #fff;
+}
+.merge{
+    width: 50%;
+}
+.kanishk{
+    color: red !important;
+}
+.icon-div{
+    margin-top: -6px;
+}
+.icon-div i{
+color: #fff;
+}
+.follow h1{
+    color: #fff;
+    font-size: 20px;
+}
+.follow{
+    margin-top: -80px;
+    margin-left: 42px;
+}
+.btn-div{
+    display: flex;
+    margin-left: 32px;
+}
+button{
+    margin: 0px 12px;
+    background:red
+}
+@media(max-width:864px){
+    .merge{
+        width: 60%;
+    }
+}
+@media(max-width:750px){
+   .kk span{
+       font-size: 35px;
+   }
+}
+@media(max-width:705px){
+    .kk{
+        align-items: center;
+        margin-left: 0px;
+    }
+    .merge{
+        width: 100%;
+    }
+    .btn-div{
+        justify-content: center;
+        margin-left: 0;
+    }
+    .follow{
+        display: flex;
+        justify-content: center;
+        margin-left: 0px;
+    }
+ }
+ @media(max-width:500px){
+    .kk span{
+        font-size: 30px;
+    }
+    p{
+        font-size: 16px;
+    }
+ }
+ @media(max-width:400px){
+   .kk span{
+       font-size: 27px;
+   }
+    p{
+        font-size: 15px;
+    }
+ }
+ 

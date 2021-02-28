@@ -1,0 +1,40 @@
+.please{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+   height: 36rem;
+    color: #fff;
+  
+   
+}
+.please h1{
+    font-size: 50px;
+    color: red;
+}
+
+.mains{
+    background:url('/../assets/sign.jpg');
+    background-size: 100% 100%;
+    height: 100vh;
+}
+form{
+ width: 50%;
+}
+.form-div{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.btn {
+    background: #c31515;
+    color: #fff;
+}
+input{
+    background: transparent;
+    color: red;
+    width: 100%;
+    padding: 7px 0px;
+    border-radius: 5px;
+    border: 2px solid #fff;
+}

@@ -1,0 +1,42 @@
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    background-color: #000000d1;
+    position: fixed;
+}
+.span{
+    margin: 0px 20px;
+    color: #fff;
+    cursor: pointer;
+}
+a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    
+}
+.auth{
+    color: #fff;
+}
+.ham
+{
+    display: none;
+    color: #fff;
+}
+@media(max-width:704px){
+    .ham{
+        display: block;
+    }
+    .home-div{
+        display: none;
+    }
+    .navbar{
+        flex-direction: row-reverse;
+    }
+}
+.active{
+color: #bdbcbc;
+}
+/deep/ .mat-menu-content {
+    background: black !important;
+}

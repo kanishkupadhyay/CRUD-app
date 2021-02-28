@@ -1,0 +1,17 @@
+{
+    "products":[
+        {
+            "id":1,
+            "name":"soap"
+        },
+        {
+            "id":2,
+            "name":"shampoo"
+        },
+        {
+            "id":3,
+            "name":"biscuit"
+        }
+
+    ]
+}
