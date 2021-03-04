@@ -1,17 +1,25 @@
 <div>
 <div class="contain">
 <div class="mains">
-<div class="please">
-    <h1>Please Sign in</h1>
 
+<div class="please">
+  <!-- alert -->
+  <div *ngIf="error" class="alert alert-danger" role="alert">
+    <strong>An error occured</strong> {{error}}
+  </div>
+  <!--  -->
+    <h1>Please Sign in</h1>
+  
 <div class="form-div">
-<form class="form-signin" id="login" role="form">
-  <a href="#" id="flipToRecover" class="flipLink">
-    <div id="triangle-topright"></div>
-  </a>
-  <input type="email"  name="loginEmail" id="loginEmail" placeholder="Email address" required autofocus><br><br>
-  <input type="password"  name="loginPass" id="loginPass" placeholder="Password" required>
-  <button class="btn btn-lg btn-block" type="submit">Sign in</button>
+<form [formGroup]="contactForm"(ngSubmit)="formSubmit(contactForm.value)" class="form-signin" id="login" role="form">
+ 
+  <input required formControlName="email" type="email"   id="loginEmail" placeholder="Email address" required autofocus><br><br>
+  
+  <input formControlName="password" type="password"  name="loginPass" id="loginPass" placeholder="Password" required>
+  <button [disabled]="contactForm.invalid" class="btn btn-lg btn-block" type="submit">Sign in</button>
+  <div>
+    <span>Don't have account? <a routerLink="/sign-up">Create one</a></span>
+  </div>
 </form>
 </div>
 </div>

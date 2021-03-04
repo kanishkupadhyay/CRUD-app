@@ -1,0 +1,31 @@
+div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+table{
+    margin: 100px 0px;
+}
+
+.first-th{
+    padding-left: 46px;
+}
+.first-ths{
+    padding-left: 46px;
+}
+th{
+    color: #fff;
+}
+td{
+    color: #fff;
+}
+@media(max-width:645px){
+    .first-th{
+        padding-left: 25px;
+    }
+    .first-ths{
+        padding-left: 40px;
+    }
+}

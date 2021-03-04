@@ -9,11 +9,20 @@ import { DesignService } from '../../services/design.service';
 export class ViewAllProductComponent implements OnInit {
 
   constructor(private designService:DesignService) { }
+  
 data:any=[]
   ngOnInit(): void {
     this.designService.getProducts().subscribe(val=>{
       this.data=val
+      console.log(val)
     })
   }
-
+  onDelete(id){
+    this.designService.deleteProducts(id).subscribe(data=>{
+      console.log(data)
+    })
+    this.designService.getProducts().subscribe(val=>{
+      this.data=val
+    })
+  }
 }

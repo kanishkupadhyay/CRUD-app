@@ -1,17 +1,25 @@
 {
-    "products":[
-        {
-            "id":1,
-            "name":"soap"
-        },
-        {
-            "id":2,
-            "name":"shampoo"
-        },
-        {
-            "id":3,
-            "name":"biscuit"
-        }
-
-    ]
+  "products": [
+    {
+      "id": 1,
+      "proName": "biscuit",
+      "price": 1200,
+      "rating": 5,
+      "isAvailable": "yes"
+    },
+    {
+      "id": 2,
+      "proName": "biscuit",
+      "price": 1200,
+      "rating": 5,
+      "isAvailable": "yes"
+    },
+    {
+      "proName": "shampoo",
+      "price": 30,
+      "rating": 4,
+      "isAvailable": "yes",
+      "id": 4
+    }
+  ]
 }

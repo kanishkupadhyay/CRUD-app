@@ -1,3 +1,34 @@
-<div *ngFor="let k of data">
-    <h1>{{k.name}}</h1>
-</div>
+<div class="mains">
+<table class="table" >
+    <thead>
+      <tr>
+        <th class="first-th"   scope="col">Index</th>
+        <th scope="col">Products</th>
+        <th scope="col">Price</th>
+        <th scope="col">Rating</th>
+        <th scope="col">Available</th>
+        <th scope="col">Edit</th>
+        <th scope="col">Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor ="let k of data; index as i">
+        <th class="first-ths" scope="row">{{i+1}}</th>
+        <td>{{k.proName}}</td>
+        <td>{{k.price}}</td>
+        <td>{{k.rating}} Star</td>
+        <td style="padding: 15px 30px;">{{k.isAvailable}}</td>
+        <td>
+           <a routerLink="/update-product/{{k.id}}"><button mat-fab color="primary" aria-label="Example icon button with a write icon">
+                <mat-icon>create</mat-icon>
+                </button>
+              </a> 
+        </td>
+        <td> <button (click)="onDelete(k.id)" mat-fab color="warn" aria-label="Example icon button with a delete icon">
+            <mat-icon>delete</mat-icon>
+            </button></td>
+      </tr>
+
+    </tbody>
+  </table>
+  </div>

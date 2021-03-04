@@ -2,7 +2,11 @@ footer{
     background: black;
     display: flex;
     justify-content: center;
-    padding: 15px 0px;
+    padding: 10px 0px;
+    position: absolute;
+  
+    bottom: 0;
+    width: 100%;
 }
 span{
     color: #fff;

@@ -1,1 +1,37 @@
-<p>update-product works!</p>
+<div  class="form">
+    <form  [formGroup]="contactForm" (ngSubmit)="formSubmit(contactForm.value);contactForm.reset()" class="example-form">
+        <div>
+            <div class="add">
+                <h1>Update Product</h1>
+            </div>
+            <mat-form-field class="example-full-width">
+                <mat-label>Enter Product Name</mat-label>
+                <input formControlName="name"    matInput placeholder=" Enter Product Name">
+            </mat-form-field>
+        </div>
+
+        <div> 
+            <mat-form-field class="example-full-width">
+                <mat-label>Enter Product Price </mat-label>
+                <input formControlName="price" type="number" matInput placeholder="Enter Product Price">
+            </mat-form-field>
+
+        </div>
+        <div>
+            <mat-form-field class="example-full-width">
+                <mat-label>Enter Product Rating</mat-label>
+                <input formControlName="rating" type="number"  matInput placeholder="Enter Product Rating">
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field class="example-full-width">
+                <mat-label>Enter Product Availability"</mat-label>
+                <input formControlName="available"  matInput placeholder="Enter Product Availability">
+            </mat-form-field>
+
+        </div>
+        <div class="btn">
+            <button [disabled]="contactForm.invalid" mat-raised-button color="warn">Add Product</button>
+        </div>
+    </form>
+</div>

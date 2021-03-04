@@ -6,8 +6,10 @@ import{MaterialsModule}from '../materials/materials.module'
 import{RouterModule}from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './footer/footer.component';
+import { ErrorComponent } from './error/error.component';
+console.log('Site layout module')
 @NgModule({
-  declarations: [NavbarComponent, HomeComponent, FooterComponent],
+  declarations: [NavbarComponent, HomeComponent, FooterComponent, ErrorComponent],
   imports: [
     CommonModule,
     MaterialsModule,
@@ -16,7 +18,8 @@ import { FooterComponent } from './footer/footer.component';
   exports:[
     NavbarComponent,
     HomeComponent,
-    FooterComponent 
+    FooterComponent ,
+    ErrorComponent
   ]
 })
 export class SiteLayoutModule { }

@@ -8,6 +8,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {SiteLayoutModule}from './site-layout/site-layout.module';
 import {HttpClientModule}from '@angular/common/http';
 import {ListProductModule}from './list-product/list-product.module'
+import {AuthenticationModule}from './authentication/authentication.module'
 @NgModule({
   declarations: [
     AppComponent
@@ -19,7 +20,8 @@ import {ListProductModule}from './list-product/list-product.module'
     NgbModule,
     SiteLayoutModule,
     HttpClientModule,
-    ListProductModule
+    ListProductModule,
+    AuthenticationModule
   ],
   providers: [],
   bootstrap: [AppComponent]

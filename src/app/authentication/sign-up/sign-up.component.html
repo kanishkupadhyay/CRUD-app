@@ -1,0 +1,27 @@
+<div>
+    <div class="contain">
+    <div class="mains">
+    <div class="please">
+       <!-- alert -->
+  <div *ngIf="error" class="alert alert-danger" role="alert">
+    <strong>An error occured</strong> {{error}}
+  </div>
+  <!--  -->
+        <h1>Create New Account</h1>
+    
+    <div class="form-div">
+    <form [formGroup]="contactForm"(ngSubmit)="formSubmit(contactForm.value)" class="form-signin" id="login" role="form">
+     
+      <input required formControlName="email" type="email"   id="loginEmail" placeholder="Email address" required autofocus><br><br>
+      
+      <input formControlName="password" type="password"  name="loginPass" id="loginPass" placeholder="Password" required>
+      <button [disabled]="contactForm.invalid" class="btn btn-lg btn-block" type="submit">Sign up</button>
+      <div>
+        <span>Already have account?<a routerLink="/sign-in">Sign in</a></span>
+      </div>
+    </form>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>

@@ -1,16 +1,17 @@
 import { Component, OnInit } from '@angular/core';
-import {FormGroup,FormControl, FormBuilder, Validators}from '@angular/forms'
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { AuthServiceService } from '../../services/auth-service.service';
 import { ErrorService } from '../../services/error.service';
+
 @Component({
-  selector: 'app-sign-in',
-  templateUrl: './sign-in.component.html',
-  styleUrls: ['./sign-in.component.css']
+  selector: 'app-sign-up',
+  templateUrl: './sign-up.component.html',
+  styleUrls: ['./sign-up.component.css']
 })
-export class SignInComponent implements OnInit {
-error;
-errMsgs=this.errorServce.errorMsg;
-  constructor(private fb:FormBuilder,private authSrvice:AuthServiceService,private errorServce:ErrorService) { 
+export class SignUpComponent implements OnInit {
+  errMsgs=this.errorServce.errorMsg;
+  error
+  constructor(private fb:FormBuilder,private authService:AuthServiceService,private errorServce:ErrorService) { 
     this.contactForm=fb.group({
       email:['',[Validators.required,Validators.email]],
       password:['',[Validators.required,Validators.minLength(8)]]
@@ -25,13 +26,11 @@ contactForm=new FormGroup({
 formSubmit(val){
   let email=val.email;
   let password=val.password
-  
-  this.authSrvice.signIn(email,password).subscribe(data=>{
+  this.authService.signUp(email,password).subscribe(data=>{
     console.log(data)
   },err=>{
     console.log(err)
    this.error=this.errMsgs[err];
-   
   })
 }
 }
