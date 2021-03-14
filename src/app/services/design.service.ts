@@ -13,7 +13,7 @@ export class DesignService {
     rating:0,
     isAvailable:''
   }
-dbUrl="https://kanishkauth-default-rtdb.firebaseio.com/products.json";
+dbUrl="https://angular-auth-database.herokuapp.com/products";
 formData=new BehaviorSubject(this.data)
   constructor(private http:HttpClient) { }
   getProducts(){
