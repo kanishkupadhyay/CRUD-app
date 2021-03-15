@@ -1,12 +1,23 @@
+<!-- Snack bar -->
+<mat-form-field style="display: none;">
+    <input matInput value="Product has been updated" #message>
+  </mat-form-field>
+  
+  <mat-form-field>
+    <input matInput value=" " #action>
+  </mat-form-field>
+  <!--  -->
+ 
+  
 <div  class="form">
-    <form  [formGroup]="contactForm" (ngSubmit)="formSubmit(contactForm.value);contactForm.reset()" class="example-form">
-        <div>
+    <form  [formGroup]="contactForm" (ngSubmit)="formSubmit(contactForm.value);contactForm.reset();openSnackBar(message.value, action.value)" class="example-form">
+        <div class="kk">
             <div class="add">
                 <h1>Update Product</h1>
             </div>
             <mat-form-field class="example-full-width">
                 <mat-label>Enter Product Name</mat-label>
-                <input formControlName="name"    matInput placeholder=" Enter Product Name">
+                <input formControlName="name" type="text"    matInput placeholder=" Enter Product Name">
             </mat-form-field>
         </div>
 
@@ -31,7 +42,7 @@
 
         </div>
         <div class="btn">
-            <button [disabled]="contactForm.invalid" mat-raised-button color="warn">Add Product</button>
+            <button [disabled]="contactForm.invalid" mat-raised-button color="warn">Update</button>
         </div>
     </form>
 </div>

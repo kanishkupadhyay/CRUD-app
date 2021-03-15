@@ -1,3 +1,15 @@
+<!-- <mat-form-field> -->
+  <div style="display: none;">
+  <mat-form-field>
+  <input matInput value="Product has been deleted!" #message>
+</mat-form-field>
+
+<mat-form-field>
+  <input matInput value="Dance" #action>
+</mat-form-field>
+</div>
+
+
 <div class="mains">
 <table class="table" >
     <thead>
@@ -24,7 +36,7 @@
                 </button>
               </a> 
         </td>
-        <td> <button (click)="onDelete(k.id)" mat-fab color="warn" aria-label="Example icon button with a delete icon">
+        <td> <button (click)="onDelete(k.id); openSnackBar(message.value, action.value)" mat-fab color="warn" aria-label="Example icon button with a delete icon">
             <mat-icon>delete</mat-icon>
             </button></td>
       </tr>

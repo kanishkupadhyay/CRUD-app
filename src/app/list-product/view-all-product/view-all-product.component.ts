@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { DesignService } from '../../services/design.service';
 
 @Component({
@@ -8,7 +9,7 @@ import { DesignService } from '../../services/design.service';
 })
 export class ViewAllProductComponent implements OnInit {
 
-  constructor(private designService:DesignService) { }
+  constructor(private designService:DesignService,private _snackBar: MatSnackBar) { }
   
 data:any=[]
   ngOnInit(): void {
@@ -24,5 +25,10 @@ data:any=[]
     this.designService.getProducts().subscribe(val=>{
       this.data=val
     })
+  }
+  openSnackBar(message: string, action: string) {
+    this._snackBar.open(message, action, {
+      duration: 2000,
+    });
   }
 }

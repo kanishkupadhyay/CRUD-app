@@ -2,9 +2,19 @@
     <div class="mains">
         <div class="con">
 
+<!--  -->
+<div style="display: none;">
+<mat-form-field>
+    <input matInput value="Product has been added" #message>
+  </mat-form-field>
+  
+  <mat-form-field>
+    <input matInput value=" " #action>
+  </mat-form-field>
+</div>
 
             <div class="form">
-                <form [formGroup]="contactForm" (ngSubmit)="formSubmit(contactForm.value);contactForm.reset()" class="example-form">
+                <form [formGroup]="contactForm" (ngSubmit)="formSubmit(contactForm.value);contactForm.reset();openSnackBar(message.value, action.value)" class="example-form">
                     <div>
                         <div class="add">
                             <h1>Add Product</h1>

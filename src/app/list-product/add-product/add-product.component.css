@@ -63,3 +63,6 @@ form{
     display: flex;
     justify-content: center;
 }
+mat-form-field {
+    margin-right: 12px;
+  }

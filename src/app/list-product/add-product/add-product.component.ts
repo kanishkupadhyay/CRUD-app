@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import{FormGroup,FormControl, FormBuilder, Validators}from '@angular/forms'
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { Product } from '../../interface/product';
 import { DesignService } from '../../services/design.service';
 
@@ -10,7 +11,7 @@ import { DesignService } from '../../services/design.service';
 })
 export class AddProductComponent implements OnInit {
 
-  constructor(private fb:FormBuilder,private design:DesignService) { }
+  constructor(private fb:FormBuilder,private design:DesignService,private _snackBar: MatSnackBar) { }
 
   ngOnInit(): void {
   }
@@ -36,5 +37,10 @@ formSubmit(val){
   })
 this.design.formData.next(data)
 
+}
+openSnackBar(message: string, action: string) {
+  this._snackBar.open(message, action, {
+    duration: 2000,
+  });
 }
 }

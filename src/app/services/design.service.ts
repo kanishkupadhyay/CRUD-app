@@ -22,11 +22,13 @@ formData=new BehaviorSubject(this.data)
   createProducts(data:Product){
     return this.http.post(this.dbUrl,data)
   }
-  updateProduct(id:any){
-    return this.http.put(this.dbUrl,id)
+  updateProduct(id:any,data:any){
+    return this.http.put(`${this.dbUrl}/${id}`,data)
   }
   deleteProducts(id:any){
     return this.http.delete(`${this.dbUrl}/${id}`)
   }
- 
+ getSingleProduct(id:any){
+   return this.http.get(`${this.dbUrl}/${id}`)
+ } 
 }

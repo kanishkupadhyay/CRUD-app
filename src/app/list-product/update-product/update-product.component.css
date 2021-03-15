@@ -6,7 +6,11 @@
     align-items: center;
     height: 40rem;
 }
-
+.kk{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 form{
     background-color: #d6d1d1c4;
     height: 500px;
@@ -52,6 +56,9 @@ form{
     }
     .mat-form-field{  
         width: 60vw;
+    }
+    .add h1{
+        font-size: 34px;
     }
 }
 .btn{

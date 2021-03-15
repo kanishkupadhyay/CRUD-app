@@ -8,7 +8,8 @@ import {MatMenuModule} from '@angular/material/menu';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatCardModule } from '@angular/material/card';
 import {MatTableModule} from '@angular/material/table';
-import {MatInputModule} from '@angular/material/input';;
+import {MatInputModule} from '@angular/material/input';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [],
@@ -22,7 +23,8 @@ import {MatInputModule} from '@angular/material/input';;
     MatFormFieldModule,
     MatCardModule,
     MatTableModule,
-    MatInputModule
+    MatInputModule,
+    MatSnackBarModule
   ],
   exports:[
     MatSidenavModule,
