@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Validators } from '@angular/forms';
 import { FormBuilder } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Product } from '../../interface/product';
 import { DesignService } from '../../services/design.service';
 
@@ -14,7 +14,7 @@ import { DesignService } from '../../services/design.service';
 export class UpdateProductComponent implements OnInit {
 values:any=[]
 contactForm:any=[]
-  constructor(private fb:FormBuilder,private design:DesignService,private activatedRoute:ActivatedRoute,private _snackBar: MatSnackBar) { 
+  constructor(private fb:FormBuilder,private design:DesignService,private activatedRoute:ActivatedRoute,private _snackBar: MatSnackBar,private router:Router) { 
     let id=activatedRoute.snapshot.params.id
     this.design.getSingleProduct(id).subscribe(data=>{
       this.values=data
@@ -47,6 +47,7 @@ formSubmit(val){
     isAvailable:productAvailable
 
   }
+  this.router.navigate(['view-all-product'])
   let id=this.activatedRoute.snapshot.params.id
   this.design.updateProduct(id,data).subscribe(data=>{
     console.log(data)
@@ -57,5 +58,6 @@ openSnackBar(message: string, action: string) {
   this._snackBar.open(message, action, {
     duration: 2000,
   });
+  
 }
 }

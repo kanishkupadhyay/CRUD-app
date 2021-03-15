@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import{FormGroup,FormControl, FormBuilder, Validators}from '@angular/forms'
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { Router } from '@angular/router';
 import { Product } from '../../interface/product';
 import { DesignService } from '../../services/design.service';
 
@@ -11,7 +12,7 @@ import { DesignService } from '../../services/design.service';
 })
 export class AddProductComponent implements OnInit {
 
-  constructor(private fb:FormBuilder,private design:DesignService,private _snackBar: MatSnackBar) { }
+  constructor(private fb:FormBuilder,private design:DesignService,private _snackBar: MatSnackBar,private router:Router) { }
 
   ngOnInit(): void {
   }
@@ -32,6 +33,7 @@ formSubmit(val){
     rating:productRating,
     isAvailable:productAvailable
   }
+  this.router.navigate(['view-all-product'])
   this.design.createProducts(data).subscribe(data=>{
     console.log(data)
   })
